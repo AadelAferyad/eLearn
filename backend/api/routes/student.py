@@ -222,4 +222,4 @@ def update_student(student_id=None):
             setattr(person, key, value)
     person.save()
     student.save()
-    return jsonify({}), 200
+    return jsonify({"message": "student has been updated"}), 200

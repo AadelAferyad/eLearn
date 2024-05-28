@@ -7,11 +7,12 @@ from flask import jsonify, request, abort
 
 
 @view_bp.route('courses', strict_slashes=False, methods=['GET'])
-# @jwt_required()
+@jwt_required()
 def courses():
     """
-     return  all courses
+    return  all courses
     """
+
     courses = storage.get(Course)
     dictionary = {}
     if courses:

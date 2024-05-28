@@ -25,4 +25,3 @@ def login():
     return jsonify({"error": "Invalid Username or Password"}), 400
 
 #logout not implemanted yet!
-

@@ -3,7 +3,7 @@ from flask import Flask, jsonify
 from models import storage
 from dotenv import load_dotenv
 from api.routes import auth_bp
-from api.routes.admin import admin_bp
+from api.routes import view_bp
 from os import getenv
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
@@ -15,12 +15,12 @@ app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = getenv('FLASK_JWT_KEY')
 jwt = JWTManager()
 jwt.init_app(app)
-CORS(app)
+CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
+
 
 #------flask app register blueprints -----
 app.register_blueprint(auth_bp, url_prefix='/api/v1')
-app.register_blueprint(admin_bp, url_prefix='/api/v1')
-
+app.register_blueprint(view_bp, url_prefix='/api/v1')
 @app.teardown_appcontext
 def close(ctx):
     """  """
