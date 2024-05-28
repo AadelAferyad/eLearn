@@ -1,7 +1,13 @@
 #!/usr/bin/python3
+"""
+    this file is for person class
+"""
+
 from models.base_models import BaseModel, Base
+
 from sqlalchemy import String, ForeignKey, Column, Date
 from sqlalchemy.orm import relationship
+
 from werkzeug.security import generate_password_hash, check_password_hash
 
 

@@ -1,7 +1,13 @@
 #!/usr/bin/python3
+"""
+    this file is for the admin class
+"""
+
 from models.base_models import BaseModel, Base
+
 from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
+
 
 class Director(BaseModel, Base):
     """ director class """

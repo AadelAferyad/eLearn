@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""
+    this file is for teacher class
+"""
+
 from models.base_models import BaseModel, Base
+
 from sqlalchemy import String, Column, ForeignKey
 from sqlalchemy.orm import relationship
 

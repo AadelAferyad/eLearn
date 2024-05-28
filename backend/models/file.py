@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""
+    this file is for handling files and images to save them in database
+"""
+
 from models.base_models import Base, BaseModel
+
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 

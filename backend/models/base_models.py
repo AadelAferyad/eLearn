@@ -1,9 +1,16 @@
 #!/usr/bin/python3
-from uuid import uuid4
+"""
+    this is the base model all the other classes will inhert from,
+    All the repeated function and variable are here
+"""
+import models
+
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.orm import declarative_base
+
+from uuid import uuid4
 from datetime import datetime
-import models
+
 
 Base = declarative_base()
 

@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+this file is for database storage
+creates database and handles CRUD opirations 
+"""
 
 from os import getenv
 from dotenv import load_dotenv
@@ -32,12 +36,16 @@ class DBStorage:
         self.__engine = create_engine(url)
 
     def get(self, obj, id=None):
-        if id and obj:
+        if id:
             return self.__session.query(obj).get(id)
         return self.__session.query(obj).all()
 
-    def get_by_name(self, obj, name):
-        return self.__session.query(obj).filter_by(name=name).all()
+    def get_by_name(self, obj, name=None, year=None):
+        if year and name:
+            return self.__session.query(obj).filter_by(name=name).filter_by(year=year).all()
+        elif name:
+            return self.__session.query(obj).filter_by(name=name).all()
+        return self.__session.query(obj).all()
 
 
     def reload(self):
@@ -59,6 +67,9 @@ class DBStorage:
     def check_username(self, username):
         return self.__session.query(Person).filter_by(username=username).first()
 
+    
+    def role(self, obj, id):
+        return self.__session.query(obj).filter_by(person_id=id).first()
 
 
     def close(self):
