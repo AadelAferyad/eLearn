@@ -57,8 +57,9 @@ This project is a student Intranet platform dedicated to students, will make acc
 
 # Screenshots
 
-![Homepage](https://example.com/screenshot1.png)
-![Portfolio](https://example.com/screenshot2.png)
+![Landing Page](https://i.imgur.com/LvMlZAl.png)
+![Feature Section](https://i.imgur.com/OLxbyfv.png)
+![About Us Page](https://i.imgur.com/hQEuden.png)
 
 # Authors
 
