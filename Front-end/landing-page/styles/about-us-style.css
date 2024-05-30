@@ -1,0 +1,209 @@
+/* Global Styling */
+
+* {
+  font-family: "Poppins", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #badaf5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00909e;
+}
+
+body {
+  background-image: url("../images/blurry-gradient-haikei.png");
+  background-size: cover;
+}
+
+/* Main Styling */
+.title {
+  display: flex;
+  justify-content: center;
+  color: #000000;
+}
+
+.title h1 {
+  font-weight: 600;
+  margin-top: 35px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000000;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 250px;
+  margin-top: 40px;
+}
+
+.card {
+  --bc: #384259;
+  --bc1: #7ac7c4;
+  --bc-al: #38425950;
+  --clr: #dae1e7;
+  background-color: var(--bc);
+  color: var(--clr);
+  padding: 3rem 4rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 40px -1px var(--bc-al);
+  outline: 2px solid var(--bc);
+  outline-offset: 4px;
+  max-width: 300px;
+  max-height: 300px;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  line-height: 1.2;
+}
+
+.card:hover {
+  --bc: #7a9bc7;
+}
+
+.img-cotainer i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  max-width: 100%;
+  width: 5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  outline: 2px solid var(--clr);
+  outline-offset: 4px;
+  fill: var(--clr);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.text p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 0.5rem;
+  padding: 0;
+  margin-inline: auto;
+}
+
+.so-li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--clr);
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0.5rem;
+}
+
+.so-li a:hover {
+  opacity: 0.7;
+}
+
+.so-icon {
+  font-size: 28px;
+}
+
+/* Form Section */
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 400px;
+  width: 600px;
+  padding: 20px 30px 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.form input {
+  outline: 0;
+  border: 1px solid rgb(219, 213, 213);
+  border-radius: 8px;
+  height: 50px;
+}
+.form input:focus {
+  border: 1px solid black;
+}
+
+.form textarea {
+  border-radius: 8px;
+  height: 350px;
+  resize: none;
+  outline: 0;
+  border: 1px solid rgb(219, 213, 213);
+}
+.form textarea:focus {
+  border: 1px solid black;
+}
+
+.form button {
+  align-self: center;
+  margin-top: 18px;
+  width: 500px;
+  padding: 8px;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #384259;
+  color: #dae1e7;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.form button:hover {
+  background-color: #7a9bc7;
+}
+.form button:active {
+  background-color: #5b82b4;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.form .input,
+.form textarea {
+  color: #333;
+  font-size: 16px;
+  padding: 15px 12px;
+}

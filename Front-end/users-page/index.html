@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="styles/index-style.css" />
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/dd187085bb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" />
+    <title>Students</title>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <img src="images/eLEARN-logo.png" alt="eLEARN-logo" id="logo" />
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header">
+      <div class="add-btn">
+        <button id="show-popup">Add New User</button>
+      </div>
+      <div class="filter">
+        <div class="students">
+          Show
+          <select name="table-size" id="table-size">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+          Students
+        </div>
+      </div>
+      <form role="search">
+        <input
+          type="search"
+          placeholder="Search for a Student"
+          aria-label="Search"
+        />
+      </form>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-con">
+      <table>
+        <thead>
+          <tr>
+            <th>Picture</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Field</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <td>
+              <img
+                src="images/057808de-d8d0-47d8-84ad-9e455ef65568.jpg"
+                alt=""
+              />
+            </td>
+            <td>Abdelhamid</td>
+            <td>Lmadani</td>
+            <td>Abdelhamid-foulla@gmail.com</td>
+            <td>Front-end</td>
+            <td>
+              <i class="fas fa-pen-to-square actions-update"></i>
+              <i class="fas fa-user-minus"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/bba97400-292b-4106-93ba-12a05e6c74ec.jpg"
+                alt=""
+              />
+            </td>
+            <td>Thornton</td>
+            <td>Ztonton</td>
+            <td>Ztonton132s@gmail.com</td>
+            <td>Back-end</td>
+            <td>
+              <i class="fas fa-pen-to-square actions-update"></i>
+              <i class="fas fa-user-minus"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/d159b5a5-308a-403a-be0c-2716644b36e2.jpg"
+                alt=""
+              />
+            </td>
+            <td>Mouad</td>
+            <td>Lhfa</td>
+            <td>lbarfixforlife@gmail.com</td>
+            <td>DevOps</td>
+            <td>
+              <i class="fas fa-pen-to-square actions-update"></i>
+              <i class="fas fa-user-minus"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/f833a345-dc64-46fc-b052-a8ec85d74bd3.jpg"
+                alt=""
+              />
+            </td>
+            <td>Youbadi</td>
+            <td>Monatana</td>
+            <td>soub7aniyala@gmail.com</td>
+            <td>Back-end</td>
+            <td>
+              <i class="fas fa-pen-to-square actions-update"></i>
+              <i class="fas fa-user-minus"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/fdf5595b-bf22-4b20-9884-f3ddc09baafc.jpg"
+                alt=""
+              />
+            </td>
+            <td>Bado</td>
+            <td>Zaki</td>
+            <td>equipemaroc@gmail.com</td>
+            <td>Front-end</td>
+            <td>
+              <i class="fas fa-pen-to-square actions-update"></i>
+              <i class="fas fa-user-minus"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/126340be-234c-4fbc-a6d7-bc6dc663d230.jpg"
+                alt=""
+              />
+            </td>
+            <td>Hamid</td>
+            <td>Jghel</td>
+            <td>hmidacab@gmail.com</td>
+            <td>DevOps</td>
+            <td>
+              <i class="fas fa-pen-to-square actions-update"></i>
+              <i class="fas fa-user-minus"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <footer>
+        <div class="pagination">
+          <button>Pervious</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>Next</button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Popup Section -->
+    <div id="popup">
+      <div class="popup-content">
+        <form action="#">
+          <div class="left-content">
+            <div class="img-holder">
+              <label for="uploadimg">
+                <img
+                  src="images/057808de-d8d0-47d8-84ad-9e455ef65568.jpg"
+                  alt="Profile"
+                  width="150"
+                  height="150"
+                />
+                <input type="file" name="uploadimg" id="uploadimg" />
+                <span>Change Your Picture</span>
+              </label>
+            </div>
+            <div class="login-info">
+              <div class="input-box">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required />
+              </div>
+              <div class="input-box">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required />
+              </div>
+              <br />
+              <select name="user-select" id="user-select">
+                <option value="Student">Student</option>
+                <option value="Teacher">Teacher</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="inputs-holder">
+            <div class="personal-info">
+              <div class="input-box">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" required />
+              </div>
+              <div class="input-box">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required />
+              </div>
+              <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="input-box">
+                <label for="phone-number">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" id="birthday" required />
+              </div>
+              <div class="field-info">
+                <div class="input-box">
+                  <label for="field">Field</label>
+                  <input type="text" name="field" id="field" required />
+                </div>
+                <div class="input-box">
+                  <label for="field-year">Field Year</label>
+                  <input
+                    type="text"
+                    name="field-year"
+                    id="field-year"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-holder">
+            <button type="submit" id="save-popup">Save</button>
+            <button type="button" id="close-popup">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

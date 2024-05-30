@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/global-style.css" />
+    <link rel="stylesheet" href="styles/index-style.css" />
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+    <title>Login</title>
+  </head>
+  <body>
+    <main class="login-page">
+      <!-- Left Side -->
+      <div class="left-side">
+        <div class="left-container">
+          <img src="images/icons8-quote.svg" alt="" id="quote-icon" />
+          <span class="quote-text">
+            <p>Digital</p>
+            <p>platform</p>
+            <p>for distance</p>
+            <p id="diff-text">learning</p>
+          </span>
+          <div id="small-quote">
+            <p>Step into Success: Step into ELEARN</p>
+          </div>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="right-side">
+        <header>
+          <img src="images/eLEARN-logo.png" alt="" id="logo" />
+        </header>
+        <div class="right-container">
+          <div class="child-container">
+            <div class="login-title">
+              <h2>LOGIN</h2>
+              <p>Please enter your informations:</p>
+            </div>
+            <div id="first-line"></div>
+            <form action="">
+              <div class="login-form">
+                <div class="login-info">
+                  <p>Username</p>
+                  <input type="text" name="username" class="inputs" required />
+                  <p>Password</p>
+                  <input
+                    type="password"
+                    name="password"
+                    class="inputs"
+                    required
+                  />
+                </div>
+                <div class="login-checkbox">
+                  <label>
+                    <input type="checkbox" class="input" />
+                    <span class="custom-checkbox"></span>
+                  </label>
+                  <p>Remember me</p>
+                </div>
+                <div id="second-line"></div>
+                <button type="submit" id="login-btn">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
