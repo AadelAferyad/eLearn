@@ -1,6 +1,6 @@
 # ELEARN
 
-![Logo](https://i.imgur.com/UvBuqdO.png)
+![Logo](https://i.imgur.com/BS0Fl9I.png)
 
 # About
 
