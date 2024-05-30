@@ -40,8 +40,8 @@ This project is a student Intranet platform dedicated to students, will make acc
 
 # Team and Roles
 
-- **Ismail Mellali** - Frontend Developer, Repository Management
-- **Aadel Aferyad** - Front-end, Web Design (UI)
+- **Ismail Mellali** - Front-end Developer, Repository Management
+- **Aadel Aferyad** - Back-end Developer, Web Design (UI)
 
 # Technologies
 
