@@ -3,10 +3,12 @@ from api.routes import view_bp
 from models import storage
 from models.course import Course
 from flask_jwt_extended import jwt_required, get_jwt
-from flask import jsonify, request, abort
+from flask import jsonify, request
 
 
 @view_bp.route('courses', strict_slashes=False, methods=['GET'])
+@view_bp.route('courses/<course>', strict_slashes=False, methods=['GET'])
+@view_bp.route('courses/<course>/<year>', strict_slashes=False, methods=['GET'])
 @jwt_required()
 def courses():
     """
