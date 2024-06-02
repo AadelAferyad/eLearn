@@ -10,18 +10,23 @@ from flask import jsonify, request
 @view_bp.route('courses/<course>', strict_slashes=False, methods=['GET'])
 @view_bp.route('courses/<course>/<year>', strict_slashes=False, methods=['GET'])
 @jwt_required()
-def courses():
-    """
-    return  all courses
+def courses(course=None, year=None):
+     """
+        Retrieve available courses from the database.
+
+        This endpoint allows for fetching courses in various ways:
+        - If no parameters are provided, it returns all available courses.
+        - If a course name is provided, it returns information about that specific course.
+        - If both a course name and a year are provided, it returns information about the specific course for that particular year.
     """
 
-    courses = storage.get(Course)
+    courses = get_by_name(Course, course, year)
     dictionary = {}
     if courses:
-        for course in courses:
-            dictionary[course.id] = {
-                "name": course.name,
-                "year": course.year,
-                "id": course.id
+        for course_i in courses:
+            dictionary[course_i.id] = {
+                "name": course_i.name,
+                "year": course_i.year,
+                "id": course_i.id
             }
         return jsonify(dictionary), 200
