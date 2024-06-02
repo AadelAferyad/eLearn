@@ -154,7 +154,7 @@ class DBStorage:
         return self.__session.query(Person).filter_by(username=username).first()
 
     def role(self, obj, id):
-         """
+        """
             Retrieves a role (Student/Teacher/Director) for a person by their person_ID.
 
             Parameters:
@@ -172,7 +172,7 @@ class DBStorage:
         return self.__session.query(obj).filter_by(person_id=id).first()
 
     def count(self, obj):
-         """
+        """
             Counts the number of objects of a given class.
             
             Parameters:
