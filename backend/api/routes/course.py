@@ -11,7 +11,7 @@ from flask import jsonify, request
 @view_bp.route('courses/<course>/<year>', strict_slashes=False, methods=['GET'])
 @jwt_required()
 def courses(course=None, year=None):
-     """
+    """
         Retrieve available courses from the database.
 
         This endpoint allows for fetching courses in various ways:
